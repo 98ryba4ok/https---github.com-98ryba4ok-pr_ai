@@ -6,4 +6,3 @@ node_modules
 # *.sqlite3
 dist
 static
-assets
