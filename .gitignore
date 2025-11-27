@@ -1,0 +1,9 @@
+venv
+node_modules
+.vscode
+.idea
+*.pyc
+# *.sqlite3
+dist
+static
+assets

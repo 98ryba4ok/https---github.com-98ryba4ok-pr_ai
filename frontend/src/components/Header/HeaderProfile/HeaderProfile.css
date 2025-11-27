@@ -1,0 +1,85 @@
+.header-profile {
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+  height: 32px;
+  gap : 8px;
+  transition: background 0.2s;
+  padding: 8px 12px;
+
+}
+
+.header-profile:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+    border: 12px;
+}
+
+.header-profile-circle {
+  width: 32px;
+  height: 32px;
+  margin-right: 5px;
+
+}
+.header-profile-name {
+  font-weight: 600;
+  font-size: 14px;
+  color: #fff;
+}
+
+.header-profile-email {
+  font-size: 12px;
+  color: #AEB9E1;
+}
+.header-profile-arrow{
+  width: 24px;
+  height: 24px;
+  align-self: center;
+  margin-top: 4px;
+}
+.header-profile-wrapper {
+  position: relative;
+  z-index: 101;
+}
+
+.header-profile-dropdown {
+  position: absolute;
+  top: 120%;
+  right: 0;
+  background: #030105;
+  border-radius: 15px;
+  padding: 25px 17px;
+
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    z-index: 2000;
+    pointer-events: auto;
+}
+
+.dropdown-item {
+  cursor: pointer;
+  color: #BEB9C3;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+}
+
+
+.dropdown-item.logout {
+  color: #9D3E26;
+  font-size: 14px;
+}
+.header-profile-hr{
+  width: 172px;
+  background-color: #5c5c5c;
+  height: 1px;
+  align-self: center;
+  margin: 12px auto;
+}
+.profileHeaderArrow{
+  margin-left: 16px;
+  height: 24px;
+  width: 24px;
+  margin-top: 6px;
+}

@@ -1,0 +1,36 @@
+.presentations-grid {
+  position: relative;
+  max-width: 1300px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr)); 
+  gap: 40px;
+  justify-content: start; 
+  padding: 40px 0;
+  z-index: 1;
+}
+
+
+.main::before {
+  content: "";
+  position: absolute;
+  top: 100px;
+  left: -200px;
+  width: 707px;
+  height: 707px;
+  background: linear-gradient(150deg, #9B0079 0%, #2370CA 100%);
+  border-radius: 50%;
+  opacity: 0.4;
+  filter: blur(100px);
+  z-index: 0;
+}
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; 
+}
+
+.main {
+  flex: 1;
+  position: relative;
+}

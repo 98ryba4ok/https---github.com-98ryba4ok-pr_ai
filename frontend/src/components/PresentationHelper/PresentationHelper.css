@@ -1,0 +1,107 @@
+.ph-btn-open {
+  background: transparent;
+  cursor: pointer;
+  border: 0;
+}
+.ph-btn-open img {
+  height: 24px;
+  width: 24px;
+    opacity: 0.6;
+  transition: opacity 0.2s;
+}
+.ph-btn-open:hover img {
+  opacity: 1;
+}
+
+.ph-overlay {
+  position: fixed;
+  
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 500;
+}
+
+.ph-modal {
+  background: #030105;
+  padding: 25px 17px;
+  border-radius: 15px;
+  position: relative;
+  box-shadow: 0 10px 35px rgba(0,0,0,0.2);
+  overflow-y: auto;
+  max-width: 404px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ph-block-title,.ph-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  margin: 0;
+}
+
+
+.ph-example,
+.ph-template {
+  background: rgba(255,255,255,0.05);
+  border: 0;
+  border-radius: 10px;
+  color:  rgba(255,255,255,0.5);;
+  padding: 18px 12px;
+  font-size: 14px;
+  white-space: pre-line;
+}
+
+
+.ph-template-wrapper {
+  position: relative;
+}
+
+.ph-btn-copy {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.ph-btn-copy img {
+  width: 20px;
+  height: 20px;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
+
+.ph-btn-copy:hover img {
+  opacity: 1;
+}
+
+.ph-container {
+  position: absolute;
+  top: 10px;   
+  right: 10px;  
+  z-index: 10;
+}
+
+.ph-btn-open {
+  background: transparent;
+  cursor: pointer;
+  border: 0;
+}
+
+.ph-btn-open img {
+  height: 24px;
+  width: 24px;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
+
+.ph-btn-open:hover img {
+  opacity: 1;
+}

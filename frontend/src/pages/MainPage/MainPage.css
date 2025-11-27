@@ -1,0 +1,149 @@
+body {
+  position: relative;
+  background-color: #000000;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 900px;
+  height: 900px;
+  border-radius: 50%;
+  background:
+    conic-gradient(
+      from 0deg,
+      #0f346b 16%,
+      #03080f 69%,
+      #3c4e66 100%
+    ),
+    linear-gradient(
+      180deg,
+      #9B0079 0%,
+      #2370CA 100%
+    );
+  background-blend-mode: screen;
+  filter: blur(120px);
+  opacity: 0.5;
+  z-index: 0;
+}
+
+header,
+main {
+  position: relative;
+  z-index: 1;
+   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-container {
+  width: 1300px;
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-title {
+  margin-top: 70px;
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: rgba(255, 255, 255, 0.5);
+  font-family: 'Inter';
+}
+
+.main-title-image {
+  width: 736px;
+  height: 426px;
+  margin-top: 40px;
+}
+
+.highlight {
+  color: #fff;
+}
+.hr_square{
+    width: 140px;
+    height: 4px;
+    background-color: #FFFFFF;
+}
+.square-menu{
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1075px; 
+    padding: 24px;
+    gap: 20px;
+    margin-top: 50px;
+}
+.square{
+    width: 31px;
+    height: 31px;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+.square-menu-text{
+    font-size: 16px;
+    color: #FFFFFF;
+}
+.main-title2{
+    color: #918DA4;
+    font-size: 60px;
+    font-weight: 500;
+}
+.sample-cards{
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+
+}
+.trial_card{
+  margin-top: 27px;
+  width: 1300px;
+  height: 60px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.trial_card-text{
+  color: #918DA4;
+  font-size: 16px;
+}
+.main-title3 {
+  margin-top: 70px;
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: rgba(255, 255, 255, 0.5);
+  font-family: 'Inter';
+  text-align: center
+}
+
+
+
+
+.page-wrapper {
+  position: relative;
+  overflow: hidden; 
+}
+
