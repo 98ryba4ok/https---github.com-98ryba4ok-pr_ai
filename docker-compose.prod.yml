@@ -17,6 +17,11 @@ services:
       - "8000"
     depends_on:
       - pgdb
+    healthcheck:
+      test: ["CMD-SHELL", "ping -c 4 -4 -A localhost:8000"]
+      interval: 5s
+      timeout: 1s
+      retries: 1
 
   pgdb:
     image: postgres:17.4-alpine3.21
@@ -44,7 +49,8 @@ services:
       - ./certbot/conf/:/etc/letsencrypt/
       - ./media:/media
     depends_on:
-      - django
+      django:
+        condition: service_healthy
     restart: always
 
 volumes:
