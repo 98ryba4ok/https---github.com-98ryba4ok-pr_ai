@@ -6,7 +6,7 @@ python manage.py migrate --noinput
 
 echo "🚀 Starting Gunicorn with stdout logging..."
 
-exec sleep 2 && gunicorn presentations_project.wsgi:application \
+sleep 2 && gunicorn presentations_project.wsgi:application \
     --bind 0.0.0.0:8000 \
     --workers 4 \
     --access-logfile '-' \
