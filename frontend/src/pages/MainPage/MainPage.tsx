@@ -21,7 +21,7 @@ const MainPage: React.FC = () => {
     if (user) {
       navigate("/presentations");
     } else {
-      showToast("Сначала нужно зарегистрироваться", "error");
+      showToast("Сначала нужно авторизироваться", "error");
     }
   };
 

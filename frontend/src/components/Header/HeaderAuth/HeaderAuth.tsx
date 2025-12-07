@@ -34,7 +34,7 @@ const HeaderMainPage: React.FC = () => {
               >
                 Войти
               </button>
-            <button className="btn-primary" onClick={() => showToast('Сначала нужно зарегестрироваться', 'error')}>Создать презентацию</button>
+            <button className="btn-primary" onClick={() => showToast('Сначала нужно авторизироваться', 'error')}>Создать презентацию</button>
           </div>
         </div>
       </header>
