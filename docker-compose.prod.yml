@@ -15,7 +15,7 @@ services:
     volumes:
       - ./media:/usr/src/app/media 
     expose:
-      - "8000"
+      - "8000:8000"
     depends_on:
       - pgdb
     # healthcheck:
