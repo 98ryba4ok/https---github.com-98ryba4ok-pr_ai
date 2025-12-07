@@ -361,12 +361,14 @@ const ProfilePage: React.FC = () => {
 
                     <div className="history-actions">
                       <a
-                        href={p.pptx_file || ""}
-                        download
-                        className="history-download"
-                      >
-                        Скачать
-                      </a>
+  href={p.pptx_file || ""}
+  target="_blank"
+  rel="noopener noreferrer"
+  download
+>
+  Скачать
+</a>
+
 
                       <button
                         className="history-delete"
