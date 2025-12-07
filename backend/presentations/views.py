@@ -27,8 +27,7 @@ class PresentationTemplateViewSet(viewsets.ReadOnlyModelViewSet):
         kwargs.setdefault('context', {}).update({'request': self.request})
         return super().get_serializer(*args, **kwargs)
 
-print('sosal')    
-print(settings.MEDIA_ROOT)
+
 class UserPresentationViewSet(viewsets.ModelViewSet):
     serializer_class = UserPresentationSerializer
     permission_classes = [IsAuthenticated]
