@@ -18,7 +18,8 @@ import iconFire from "../../assets/iconFire.png";
 import { AxiosError } from "axios";
 import Footer from "../../components/Footer/Footer";
 import {
-  fetchUserPresentations, deleteUserPresentation
+  fetchUserPresentations,
+  deleteUserPresentation,
 } from "../../api/presentations";
 import type { UserPresentation } from "../../types/presentation";
 const ProfilePage: React.FC = () => {
@@ -26,8 +27,7 @@ const ProfilePage: React.FC = () => {
   const dispatch = useDispatch<AppDispatch>();
   const { showToast } = useToast();
   const [presentations, setPresentations] = useState<UserPresentation[]>([]);
-const [loadingHistory, setLoadingHistory] = useState(false);
-
+  const [loadingHistory, setLoadingHistory] = useState(false);
 
   const [activeTab, setActiveTab] = useState<"info" | "payments" | "history">(
     "info"
@@ -338,46 +338,47 @@ const [loadingHistory, setLoadingHistory] = useState(false);
           )}
 
           {activeTab === "history" && (
-  <div className="history-tab">
-    <h2 className="tab-info-h2">История генераций</h2>
+            <div className="history-tab">
+              <h2 className="tab-info-h2">История генераций</h2>
 
-    {loadingHistory && <p>Загрузка...</p>}
+              {loadingHistory && <p>Загрузка...</p>}
 
-    {!loadingHistory && presentations.length === 0 && (
-      <p>У вас пока нет сгенерированных презентаций</p>
-    )}
+              {!loadingHistory && presentations.length === 0 && (
+                <p className="no_generated">
+                  У вас пока нет сгенерированных презентаций
+                </p>
+              )}
 
-    {!loadingHistory &&
-      presentations.map((p) => (
-        <div key={p.id} className="history-item">
-          <div className="history-info">
-            <h3>{p.title || "Без названия"}</h3>
-            <p className="history-date">
-              {new Date(p.created_at).toLocaleString()}
-            </p>
-          </div>
+              {!loadingHistory &&
+                presentations.map((p) => (
+                  <div key={p.id} className="history-item">
+                    <div className="history-info">
+                      <h3>{p.title || "Без названия"}</h3>
+                      <p className="history-date">
+                        {new Date(p.created_at).toLocaleString()}
+                      </p>
+                    </div>
 
-          <div className="history-actions">
-            <a
-              href={p.pptx_file || ""}
-              download
-              className="history-download"
-            >
-              Скачать
-            </a>
+                    <div className="history-actions">
+                      <a
+                        href={p.pptx_file || ""}
+                        download
+                        className="history-download"
+                      >
+                        Скачать
+                      </a>
 
-            <button
-              className="history-delete"
-              onClick={() => openDeleteModal(p.id, p.title)}
-            >
-              Удалить
-            </button>
-          </div>
-        </div>
-      ))}
-  </div>
-)}
-
+                      <button
+                        className="history-delete"
+                        onClick={() => openDeleteModal(p.id, p.title)}
+                      >
+                        Удалить
+                      </button>
+                    </div>
+                  </div>
+                ))}
+            </div>
+          )}
         </main>
       </div>
       <Footer />

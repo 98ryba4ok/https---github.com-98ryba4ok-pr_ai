@@ -529,3 +529,10 @@
   border-color: #FF3B3B;
   color: #FF6B6B;
 }
+.no_generated{
+    color: #fff;
+}
+
+.profile-container{
+  padding-top: 60px;
+}

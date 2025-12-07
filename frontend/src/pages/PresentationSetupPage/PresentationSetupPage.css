@@ -437,3 +437,7 @@ color: #000;
 .SETUP-template-info{
   align-self: start;
 }
+
+.setup-main{
+  padding-top: 100px;
+}

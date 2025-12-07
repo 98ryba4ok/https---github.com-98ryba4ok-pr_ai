@@ -8,8 +8,23 @@ import cardImage1 from "../../assets/card1.png";
 import cardImage2 from "../../assets/card2.png";
 import cardImage3 from "../../assets/card3.png";
 import { useToast } from "../../components/ToastProvider/ToastProvider";
+import { useSelector } from "react-redux";
+import type { RootState } from "../../store";
+import { useNavigate } from "react-router-dom";
+
 const MainPage: React.FC = () => {
   const { showToast } = useToast();
+  const user = useSelector((state: RootState) => state.auth.user);
+  const navigate = useNavigate();
+
+   const handleCreate = () => {
+    if (user) {
+      navigate("/presentations");
+    } else {
+      showToast("Сначала нужно зарегистрироваться", "error");
+    }
+  };
+
   return (
     <div className="page-wrapper ">
       <Header />
@@ -56,7 +71,7 @@ const MainPage: React.FC = () => {
           <br />
           уже сейчас
           </h2>
-           <button className="btn btn-primary" onClick={() => showToast('Сначала нужно зарегестрироваться', 'error')}>Создать презентацию</button>
+           <button className="btn btn-primary" onClick={handleCreate}>Создать презентацию</button>
 
         </div>
                        
